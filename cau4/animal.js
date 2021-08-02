@@ -18,12 +18,12 @@ class Animal{
         return this.weight;
     }
     toString() {
-        alert("Tên: " + this.name + " Cân nặng: " + this.weight)
+        return "Tên: " + this.name + " Cân nặng: " + this.weight
     }
 }
 let objAnimal1 = new Animal()
 objAnimal1.setName("Elepant")
 objAnimal1.setWeight(45.6)
-objAnimal1.toString()
+alert(objAnimal1.toString())
 let objAnimal2 = new Animal("Tiger",33)
 objAnimal2.setName("Mouse")
