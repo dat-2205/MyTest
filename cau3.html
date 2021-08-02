@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input type="text" id="string">
+  <button onclick="checkString()">Nhập</button>
+  <p id="display"></p>
+  <script>
+      let arr = ['a','o','e','u','i']
+      function checkString() {
+        let check = false;
+        let string = document.getElementById("string").value;
+        let count = 0;
+        for(let i=0;i<string.length;i++){
+            for(let j=0;j<arr.length;j++){
+                if(string[i]==arr[j]) {
+                  check = true;
+                  count++;
+                }
+            }
+        }
+        if(check==true){
+            alert("Chuỗi có số nguyên âm là: " + count)
+        }else {
+            alert("Chuỗi không có nguyên âm!!")
+        }
+        return check;
+      }
+  </script>
+</body>
+</html>

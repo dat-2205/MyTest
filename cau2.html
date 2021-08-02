@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input type="number" id="num">
+  <button onclick="searchArr()">Kiểm tra</button>
+  <p id="displayArr"></p>
+  <script>
+      let arr = [1,2,3,4,5,6,7]
+      for(let i=0;i<arr.length;i++){
+          document.getElementById("displayArr").innerHTML += arr[i] + " ;";
+      }
+
+      function searchArr() {
+          let num = document.getElementById("num").value;
+          num = parseInt(num);
+          let check = false
+          let id = 0;
+          for(let i=0;i<arr.length;i++){
+              if(arr[i]==num){
+                check = true;
+                id = i;
+                break;
+              }
+          }
+          if(check){
+              alert("Số này có trong mảng!!")
+              alert("Có chỉ số là " + id)
+          }else{
+              alert("Số này không có trong mảng")
+          }
+      }
+  </script>
+</body>
+</html>
